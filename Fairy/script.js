@@ -11,7 +11,7 @@ document.getElementById('littleredridinghood').addEventListener('click', functio
 });
 
 document.getElementById('cinderella').addEventListener('click', function () {
-    selectStory('Cinderella');
+    selectStory('cinderella');
 });
 
 document.getElementById('sleepingbeauty').addEventListener('click', function () {
