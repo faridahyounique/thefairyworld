@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="little_red_riding_hood.css">
+    <title>Little Red Riding Hood</title>
+    <script src="little_red_riding_hood.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="story-container">
+        <div  class="">
+          <h3 id="point-display"></h3>
+        </div>
+        <div id="story-text"></div>
+        <div id="options-container">
+            <button id="option1" onclick="makeChoice(1)" title="Choose Option 1"></button>
+            <button id="option2" onclick="makeChoice(2)" title="Choose Option 2"></button>
+        </div>
+    </div>
+        <div id="back-to-home"></div>
+        <img id="background-image" alt="Background Image">
+        <div id="settings-icon" onclick="openSettings()">⚙️</div>
+        <div id="settings-page">
+            <div id="audio-controls">
+                <label for="volume-control">Volume:</label>
+                <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1" onchange="adjustVolume()">
+                <button id="mute-button" onclick="toggleMute()">Mute</button>
+                <label for="audio-select">Select Audio:</label>
+                <select id="audio-select" onchange="changeAudio()">
+                    <option value="audio1">Audio 1</option>
+                    <option value="audio2">Audio 2</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+        </div>
+        <audio id="audio-player" autoplay loop></audio>
+        <a href="../index.html" id="back-logo">
+            <img src="back_icon.png" alt="Back" style="width: 50px; height: 50px;">
+        </a>
+    </div>
+</body>
+</html>
